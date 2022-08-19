@@ -30,6 +30,9 @@ export default function WordCard(props) {
             } else {
                 console.log('reset try again')
                 console.log('attempt = %d', state.attempt)
+                if(state.attempt == 5) {
+                    console.log('hint : when you meet your friend, you say .....')
+                }
                 setState({ ...state, guess: '', attempt: state.attempt + 1 })  
             }
         }
