@@ -1,7 +1,14 @@
 import './App.css';
 import WordCard from './WordCard';
 
-const word = "Hello"
+const myCollection = [
+  "Hello",
+  "สวัสดี",
+  "Hi"
+];
+
+const randomWord = myCollection[Math.floor(Math.random()*myCollection.length)];
+
 function App() {
   function refreshPage() {
     window.location.reload(false);
@@ -9,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <WordCard value={word}/>
+      <WordCard value={randomWord}/>
       <button onClick={refreshPage}>Reset</button>
     </div>
   );
